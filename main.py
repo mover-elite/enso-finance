@@ -29,8 +29,9 @@ def approve(
 
 
 @app.post("/borrow")
-def borrow():
-    return "Hi"
+def borrow(chain_id: str, account: str):
+    res = enso.borrow(chain_id, account)
+    return res
 
 
 if __name__ == "__main__":

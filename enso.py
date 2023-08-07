@@ -186,6 +186,7 @@ class EnsoFinance:
             },
         )
         data = res.json()
+        return data
         tx = data.get("tx")
         tx["value"] = int(tx["value"])
         tx["gasPrice"] = provider.eth.gas_price
